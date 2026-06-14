@@ -8,11 +8,11 @@ data:
     server {
       listen 8000;
       server_name localhost;
-	  
-      root /homework;
+
+    root /homework;
       index index.html;
-	  
+
       location / {
-        try_files $uri $uri/ =404;  
+        try_files $uri $uri/ =404;
       }
     }
