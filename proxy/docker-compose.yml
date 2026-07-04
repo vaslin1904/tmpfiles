@@ -27,7 +27,7 @@ services:
       - WORDPRESS_DB_PASSWORD=$MYSQL_PASSWORD
       - WORDPRESS_DB_NAME=wordpress
     volumes:
-      - wordpress:/usr/share/angie/html:ro
+      - wordpress:/var/www/html
     networks:
       - app-network
 
@@ -40,9 +40,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - wordpress:/usr/share/angie/html
-      - /home/vagrant/angie/angie.conf:/etc/angie/angie.conf:ro
-      - /home/vagrant/angie/http.d:/etc/angie/http.d:ro
+      - wordpress:/var/www/html:ro
+      - /home/vasy/angie/angie.conf:/etc/angie/angie.conf:ro
+      - /home/vasy/angie/http.d:/etc/angie/http.d:ro
     networks:
       - app-network
 volumes:
