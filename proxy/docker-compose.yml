@@ -40,8 +40,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - wordpress:/var/www/html
-      - /home/vagrant/angie:/etc/angie:ro
+      - wordpress:/usr/share/angie/html
+      - /home/vagrant/angie/angie.conf:/etc/angie/angie.conf:ro
+      - /home/vagrant/angie/http.d:/etc/angie/http.d:ro
     networks:
       - app-network
 volumes:
