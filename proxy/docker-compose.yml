@@ -70,6 +70,7 @@ services:
     environment:
       - GF_RENDERING_SERVER_URL=http://renderer:8081/render
       - GF_RENDERING_CALLBACK_URL=http://grafana:3000/
+      - GF_RENDERING_RENDERER_TOKEN=2e09c8a942ce0873490ac358a9ae4ad8
     volumes:
       - /home/vasy/grafana/grafana:/etc/grafana:ro
     networks:
@@ -80,6 +81,7 @@ services:
     environment:
      - HTTP_HOST=0.0.0.0
      - HTTP_PORT=8081
+     - RENDERING_TOKEN=2e09c8a942ce0873490ac358a9ae4ad8
     networks:
       - app-network
 
